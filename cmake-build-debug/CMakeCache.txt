@@ -213,6 +213,12 @@ DineIn_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 DineIn_SOURCE_DIR:STATIC=/Users/rainawan/CLionProjects/CS8/DineIn
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/opt/homebrew/lib/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

@@ -1,3 +1,5 @@
 # ninja log v5
-1	308	1681860660395063959	CMakeFiles/DineIn.dir/main.cpp.o	d56e25b452452f43
-309	350	1681860660438298373	DineIn	b07f4cf582a75b73
+1	246	1681861661154545149	CMakeFiles/DineIn.dir/main.cpp.o	ce473055ca83944b
+0	6	0	/Users/rainawan/CLionProjects/CS8/DineIn/cmake-build-debug/CMakeFiles/cmake.verify_globs	91304d4290a764d
+246	279	1681861661188592255	DineIn	534e89265e770531
+3	277	1681861655128159634	CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o	f2721467f3ff0230
