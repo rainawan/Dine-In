@@ -11,6 +11,8 @@
 #include "../Components/Menu/MenuBar.h"
 #include "../Components/TextInput/TextInput.h"
 #include "../Applications/HomePage.h"
+#include "../Components/FileTree/FileTreeNode.h"
+#include "../Components/FileTree/FileTree.h"
 
 class Application {
 private:

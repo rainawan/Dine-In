@@ -15,6 +15,10 @@ void TextBox::setOutlineColor(sf::Color color) {
     textbox.setOutlineColor(color);
 }
 
+void TextBox::setFillColor(sf::Color color) {
+    textbox.setFillColor(color);
+}
+
 void TextBox::setPosition(const sf::Vector2f &position) {
     textbox.setPosition(position);
 }

@@ -13,9 +13,10 @@ void HomePage::init() {
     header.setFont(Fonts::getFont(EVIDANCE));
     header.setCharacterSize(200);
     header.setFillColor(sf::Color::Black);
-    header.setPosition({900,200});
+    header.setPosition({820,200});
 
     text_input.setPosition({750,500});
+
 
     sprite.setSprite(HOME);
     sprite.sf::RectangleShape::setScale({4.5,4}); // home

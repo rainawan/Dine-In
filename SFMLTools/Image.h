@@ -15,6 +15,9 @@ enum image_enum {
     BACKGROUND,
     FILE_ITEM,
     FOLDER,
+    SORT,
+    PRICE,
+    POPULARITY,
     LAST_IMAGE
 };
 

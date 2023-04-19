@@ -21,6 +21,7 @@ private:
 public:
     Item();
     Item(std::string text, sf::Vector2f size);
+    void reinitialize(std::string text, sf::Vector2f size);
     void onClick(void (*f)(), sf::RenderWindow& window);
     void setBoxSize(sf::Vector2f size);
     void setTextSize(unsigned int size);
@@ -29,10 +30,9 @@ public:
     sf::FloatRect getGlobalBounds() const;
     void setPosition(const sf::Vector2f& position);
     void setPosition(float x, float y);
-//    void setPosition(sf::Vector2f position) const;
     void setTextPosition(const sf::Vector2f& position);
     void setString(std::string text);
-    sf::Vector2f getPosition();
+    sf::Vector2f getPosition() const;
     std::string getString() const;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

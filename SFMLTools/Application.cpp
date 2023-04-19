@@ -17,18 +17,13 @@ void Application::eventListener() {
 }
 
 void Application::runLoop() {
-    DropdownMenu menu = {"ONE", "TWO", "THREE"};
-    menu.setPosition({300,200});
-
-    MenuBar menu_bar;
-    menu_bar.addItem("menu 0",{"do", "re", "mi"});
-    menu_bar.addItem("menu 1",{"fa","so","la"});
-    menu_bar.addItem("menu 2",{"ti","do"});
-
-    TextInput t;
-
     HomePage home;
 
+    FileTree tree;
+    tree.push("Folder1");
+    tree.push("Folder1/file1");
+    tree.push("Folder1/file2");
+    tree.push("Folder1/file2/page1");
 
     while(window.isOpen()) {
 
@@ -36,19 +31,12 @@ void Application::runLoop() {
         while(window.pollEvent(event)) {
             if(sf::Event::Closed == event.type)
                 window.close();
-            menu.eventHandler(window, event);
-
             home.eventHandler(window, event);
-        }
-
-
-        for(GUIComponent *o : objects)
-        {
-            o->update();
+            tree.eventHandler(window, event);
         }
 
         home.update();
-        window.clear(sf::Color(255, 242, 204));
+        window.clear(sf::Color::White);
         window.draw(home);
         window.display();
     }

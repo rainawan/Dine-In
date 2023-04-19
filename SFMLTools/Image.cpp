@@ -17,6 +17,9 @@ std::string Image::getPath(image_enum image) {
         case TABLE: return "SFMLTools/images/restaurant.jpeg";
         case FOOD: return "SFMLTools/images/food.jpeg";
         case BACKGROUND: return "SFMLTools/images/background.jpeg";
+        case SORT: return "SFMLTools/images/sort-down.png";
+        case PRICE: return "SFMLTools/images/price-tag.png";
+        case POPULARITY: return "SFMLTools/images/fire.png";
         case LAST_IMAGE: "";
     }
     return std::string();

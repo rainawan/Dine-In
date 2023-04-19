@@ -19,6 +19,7 @@ private:
 public:
     TextBox();
     void setOutlineColor(sf::Color color);
+    void setFillColor(sf::Color color);
     void setPosition(const sf::Vector2f& position);
     void setPosition(float x, float y);
     sf::Vector2f getPosition();

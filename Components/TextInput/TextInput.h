@@ -19,10 +19,12 @@ private:
     sf::Text label;
     Cursor cursor;
 public:
+    TextInput();
     void setLabel(std::string string);
     void setLabelSize(int num);
     void setPosition(const sf::Vector2f& position);
     void setPosition(float x, float y);
+    void setOutlineColor(sf::Color color);
     void initialize();
 
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const override;

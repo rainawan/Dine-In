@@ -13,6 +13,11 @@ Item::Item(std::string text, sf::Vector2f size) {
     setupBox(size);
 }
 
+void Item::reinitialize(std::string text, sf::Vector2f size) {
+    setupText(text);
+    setupBox(size);
+}
+
 void Item::onClick(void (*f)(), sf::RenderWindow& window) {
     if(MouseEvents::isClicked(box, window)) {
         f();
@@ -24,7 +29,6 @@ void Item::setupText(std::string text) {
     this->text.setString(text);
     this->text.setFillColor(sf::Color::Red);
     Position::centerText(box, this->text);
-//    setupColor(sf::Color::White, sf::Color::Blue);
     box.setFillColor(sf::Color::Green);
     box.setOutlineColor(sf::Color::Black);
     box.setOutlineThickness(2);
@@ -84,7 +88,7 @@ void Item::setString(std::string text) {
     this->text.setString(text);
 }
 
-sf::Vector2f Item::getPosition() {
+sf::Vector2f Item::getPosition() const {
     return box.getPosition();
 }
 
