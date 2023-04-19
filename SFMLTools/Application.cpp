@@ -25,6 +25,8 @@ void Application::runLoop() {
     menu_bar.addItem("menu 1",{"fa","so","la"});
     menu_bar.addItem("menu 2",{"ti","do"});
 
+    TextInput t;
+
 
     while(window.isOpen()) {
 
@@ -33,6 +35,7 @@ void Application::runLoop() {
             if(sf::Event::Closed == event.type)
                 window.close();
             menu.eventHandler(window, event);
+            t.eventHandler(window, event);
         }
 
 
@@ -41,8 +44,9 @@ void Application::runLoop() {
             o->update();
         }
 
+        t.update();
         window.clear(sf::Color(255, 242, 204));
-        window.draw(menu);
+        window.draw(t);
         window.display();
     }
 }

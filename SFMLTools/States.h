@@ -9,6 +9,8 @@
 enum states_enum {
     CLICKED,
     NOT_CLICKED,
+    ENABLED,
+    BLINK,
     HIDDEN,
     SHOWN,
     NO_CHANGE,
