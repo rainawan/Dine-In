@@ -10,6 +10,7 @@
 #include "GUIComponent.h"
 #include "../Components/Menu/MenuBar.h"
 #include "../Components/TextInput/TextInput.h"
+#include "../Applications/HomePage.h"
 
 class Application {
 private:

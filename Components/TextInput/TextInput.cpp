@@ -17,7 +17,7 @@ void TextInput::setLabelSize(int num) {
 }
 
 void TextInput::setPosition(const sf::Vector2f &position) {
-    label.setPosition(position);
+    textbox.setPosition(position);
 }
 
 void TextInput::setPosition(float x, float y) {
@@ -31,7 +31,7 @@ void TextInput::initialize() {
     typing.setPosition({textbox.getPosition().x, textbox.getPosition().y});
 
     cursor.setFillColor(sf::Color::Black);
-    cursor.setPosition({typing.getPosition().x + typing.getGlobalBounds().width + 2, typing.getPosition().y});
+    cursor.setPosition({typing.getPosition().x + typing.getGlobalBounds().width + 1, typing.getPosition().y});
     cursor.setCharacterSize(typing.getCharacterSize() - 5);
 }
 

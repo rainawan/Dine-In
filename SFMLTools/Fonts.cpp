@@ -11,7 +11,10 @@ void Fonts::load(fonts_enum font) {
 
 std::string Fonts::getPath(fonts_enum font) {
     switch(font) {
-        case OPEN_SANS: return "SFMLTools/OpenSans-Bold.ttf";
+        case OPEN_SANS: return "SFMLTools/fonts/OpenSans-Bold.ttf";
+        case AVALON: return "SFMLTools/fonts/Avalon.ttf";
+        case EVIDANCE: return "SFMLTools/fonts/Evidance Display Demo.otf";
+        case RICHARD: return "SFMLTools/fonts/Richard Samuels.otf";
         case LAST_FONT: return "";
     }
 }

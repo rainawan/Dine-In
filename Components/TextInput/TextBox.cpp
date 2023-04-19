@@ -5,7 +5,7 @@
 #include "TextBox.h"
 
 TextBox::TextBox() {
-    textbox.setSize({500,50});
+    textbox.setSize({1000,100});
     textbox.setFillColor(sf::Color::Transparent);
     textbox.setOutlineColor(sf::Color::Black);
     textbox.setOutlineThickness(thickness);

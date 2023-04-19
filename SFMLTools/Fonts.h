@@ -9,6 +9,9 @@
 
 enum fonts_enum {
     OPEN_SANS,
+    AVALON,
+    EVIDANCE,
+    RICHARD,
     LAST_FONT
 };
 

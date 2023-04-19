@@ -4,7 +4,7 @@
 
 #include "Application.h"
 
-Application::Application() : window({1000,720, 32}, "MENU") {
+Application::Application() : window({2500,1500, 32}, "Dine-In") {
 
 }
 
@@ -27,6 +27,8 @@ void Application::runLoop() {
 
     TextInput t;
 
+    HomePage home;
+
 
     while(window.isOpen()) {
 
@@ -35,7 +37,8 @@ void Application::runLoop() {
             if(sf::Event::Closed == event.type)
                 window.close();
             menu.eventHandler(window, event);
-            t.eventHandler(window, event);
+
+            home.eventHandler(window, event);
         }
 
 
@@ -44,9 +47,9 @@ void Application::runLoop() {
             o->update();
         }
 
-        t.update();
+        home.update();
         window.clear(sf::Color(255, 242, 204));
-        window.draw(t);
+        window.draw(home);
         window.display();
     }
 }
