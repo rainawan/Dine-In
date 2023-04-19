@@ -4,6 +4,49 @@
 
 #include "Application.h"
 
-Application::Application() {
+Application::Application() : window({1000,720, 32}, "MENU") {
 
+}
+
+Application::Application(sf::VideoMode videoMode, std::string title) : window(videoMode, title) {
+
+}
+
+void Application::eventListener() {
+
+}
+
+void Application::runLoop() {
+    DropdownMenu menu = {"ONE", "TWO", "THREE"};
+    menu.setPosition({300,200});
+
+    MenuBar menu_bar;
+    menu_bar.addItem("menu 0",{"do", "re", "mi"});
+    menu_bar.addItem("menu 1",{"fa","so","la"});
+    menu_bar.addItem("menu 2",{"ti","do"});
+
+
+    while(window.isOpen()) {
+
+        sf::Event event;
+        while(window.pollEvent(event)) {
+            if(sf::Event::Closed == event.type)
+                window.close();
+            menu.eventHandler(window, event);
+        }
+
+
+        for(GUIComponent *o : objects)
+        {
+            o->update();
+        }
+
+        window.clear(sf::Color(255, 242, 204));
+        window.draw(menu);
+        window.display();
+    }
+}
+
+void Application::addDrawable(GUIComponent &object) {
+    objects.push_back(&object);
 }

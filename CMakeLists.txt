@@ -9,7 +9,9 @@ file(GLOB DineIn_SRC CONFIGURE_DEPENDS "*.h" "*.cpp")
 set(SOURCE_FILES main.cpp)
 
 # Add's all the found source files within the executable
-add_executable(DineIn ${DineIn_SRC} SFMLTools/Application.cpp SFMLTools/Application.h SFMLTools/GUIComponent.cpp SFMLTools/GUIComponent.h SFMLTools/States.cpp SFMLTools/States.h)
+add_executable(DineIn ${DineIn_SRC} SFMLTools/Application.cpp SFMLTools/Application.h SFMLTools/Fonts.cpp SFMLTools/Fonts.h SFMLTools/GUIComponent.cpp SFMLTools/GUIComponent.h SFMLTools/MouseEvents.cpp SFMLTools/MouseEvents.h SFMLTools/Position.cpp SFMLTools/Position.h SFMLTools/States.cpp SFMLTools/States.h
+        Components/History/DropdownSnapshot.cpp Components/History/DropdownSnapshot.h Components/History/History.cpp Components/History/History.h Components/History/Snapshot.cpp Components/History/Snapshot.h Components/History/SnapshotInterface.cpp Components/History/SnapshotInterface.h
+        Components/Menu/DropdownMenu.cpp Components/Menu/DropdownMenu.h Components/Menu/Item.cpp Components/Menu/Item.h Components/Menu/ItemList.cpp Components/Menu/ItemList.h Components/Menu/MenuBar.cpp Components/Menu/MenuBar.h)
 include_directories(/usr/local/include)
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)

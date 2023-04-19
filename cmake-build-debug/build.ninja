@@ -60,8 +60,29 @@ build CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o: CXX_COMPILER__DineIn_De
   OBJECT_DIR = CMakeFiles/DineIn.dir
   OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
 
+build CMakeFiles/DineIn.dir/SFMLTools/Fonts.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/SFMLTools/Fonts.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/SFMLTools/Fonts.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
+
 build CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/SFMLTools/GUIComponent.cpp || cmake_object_order_depends_target_DineIn
   DEP_FILE = CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
+
+build CMakeFiles/DineIn.dir/SFMLTools/MouseEvents.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/SFMLTools/MouseEvents.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/SFMLTools/MouseEvents.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
+
+build CMakeFiles/DineIn.dir/SFMLTools/Position.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/SFMLTools/Position.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/SFMLTools/Position.cpp.o.d
   FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/DineIn.dir
@@ -74,6 +95,62 @@ build CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o: CXX_COMPILER__DineIn_Debug /
   OBJECT_DIR = CMakeFiles/DineIn.dir
   OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
 
+build CMakeFiles/DineIn.dir/Components/History/DropdownSnapshot.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/History/DropdownSnapshot.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/History/DropdownSnapshot.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/History
+
+build CMakeFiles/DineIn.dir/Components/History/History.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/History/History.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/History/History.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/History
+
+build CMakeFiles/DineIn.dir/Components/History/Snapshot.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/History/Snapshot.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/History/Snapshot.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/History
+
+build CMakeFiles/DineIn.dir/Components/History/SnapshotInterface.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/History/SnapshotInterface.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/History/SnapshotInterface.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/History
+
+build CMakeFiles/DineIn.dir/Components/Menu/DropdownMenu.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/Menu/DropdownMenu.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/Menu/DropdownMenu.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/Menu
+
+build CMakeFiles/DineIn.dir/Components/Menu/Item.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/Menu/Item.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/Menu/Item.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/Menu
+
+build CMakeFiles/DineIn.dir/Components/Menu/ItemList.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/Menu/ItemList.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/Menu/ItemList.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/Menu
+
+build CMakeFiles/DineIn.dir/Components/Menu/MenuBar.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Components/Menu/MenuBar.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Components/Menu/MenuBar.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Components/Menu
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DineIn
@@ -82,7 +159,7 @@ build CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o: CXX_COMPILER__DineIn_Debug /
 #############################################
 # Link the executable DineIn
 
-build DineIn: CXX_EXECUTABLE_LINKER__DineIn_Debug CMakeFiles/DineIn.dir/main.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build DineIn: CXX_EXECUTABLE_LINKER__DineIn_Debug CMakeFiles/DineIn.dir/main.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Fonts.cpp.o CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o CMakeFiles/DineIn.dir/SFMLTools/MouseEvents.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Position.cpp.o CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o CMakeFiles/DineIn.dir/Components/History/DropdownSnapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/History.cpp.o CMakeFiles/DineIn.dir/Components/History/Snapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/SnapshotInterface.cpp.o CMakeFiles/DineIn.dir/Components/Menu/DropdownMenu.cpp.o CMakeFiles/DineIn.dir/Components/Menu/Item.cpp.o CMakeFiles/DineIn.dir/Components/Menu/ItemList.cpp.o CMakeFiles/DineIn.dir/Components/Menu/MenuBar.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/DineIn.dir
