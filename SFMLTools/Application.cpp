@@ -19,11 +19,7 @@ void Application::eventListener() {
 void Application::runLoop() {
     HomePage home;
 
-    FileTree tree;
-    tree.push("Folder1");
-    tree.push("Folder1/file1");
-    tree.push("Folder1/file2");
-    tree.push("Folder1/file2/page1");
+    RestaurantItem item;
 
     while(window.isOpen()) {
 
@@ -32,12 +28,12 @@ void Application::runLoop() {
             if(sf::Event::Closed == event.type)
                 window.close();
             home.eventHandler(window, event);
-            tree.eventHandler(window, event);
+            item.eventHandler(window, event);
         }
 
         home.update();
         window.clear(sf::Color::White);
-        window.draw(home);
+        window.draw(item);
         window.display();
     }
 }

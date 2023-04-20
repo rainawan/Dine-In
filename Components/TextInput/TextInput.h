@@ -26,6 +26,8 @@ public:
     void setPosition(float x, float y);
     void setOutlineColor(sf::Color color);
     void initialize();
+    sf::FloatRect getGlobalBounds() const;
+    sf::Vector2f getPosition();
 
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;

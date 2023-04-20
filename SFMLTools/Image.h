@@ -10,11 +10,8 @@
 
 enum image_enum {
     HOME,
-    TABLE,
     FOOD,
-    BACKGROUND,
-    FILE_ITEM,
-    FOLDER,
+    SEARCH,
     SORT,
     PRICE,
     POPULARITY,

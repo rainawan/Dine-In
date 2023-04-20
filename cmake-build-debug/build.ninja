@@ -221,6 +221,20 @@ build CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o: CXX_COMPILER__DineIn_Debug /
   OBJECT_DIR = CMakeFiles/DineIn.dir
   OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/SFMLTools
 
+build CMakeFiles/DineIn.dir/Applications/RestaurantsPage.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Applications/RestaurantsPage.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Applications/RestaurantsPage.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Applications
+
+build CMakeFiles/DineIn.dir/Applications/RestaurantItem.cpp.o: CXX_COMPILER__DineIn_Debug /Users/rainawan/CLionProjects/CS8/DineIn/Applications/RestaurantItem.cpp || cmake_object_order_depends_target_DineIn
+  DEP_FILE = CMakeFiles/DineIn.dir/Applications/RestaurantItem.cpp.o.d
+  FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  INCLUDES = -I/usr/local/include -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/DineIn.dir
+  OBJECT_FILE_DIR = CMakeFiles/DineIn.dir/Applications
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DineIn
@@ -229,7 +243,7 @@ build CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o: CXX_COMPILER__DineIn_Debug /
 #############################################
 # Link the executable DineIn
 
-build DineIn: CXX_EXECUTABLE_LINKER__DineIn_Debug CMakeFiles/DineIn.dir/main.cpp.o CMakeFiles/DineIn.dir/Applications/HomePage.cpp.o CMakeFiles/DineIn.dir/Components/FileTree/FileTree.cpp.o CMakeFiles/DineIn.dir/Components/FileTree/FileTreeNode.cpp.o CMakeFiles/DineIn.dir/Components/History/DropdownSnapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/History.cpp.o CMakeFiles/DineIn.dir/Components/History/Snapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/SnapshotInterface.cpp.o CMakeFiles/DineIn.dir/Components/History/TextInputSnapshot.cpp.o CMakeFiles/DineIn.dir/Components/Menu/DropdownMenu.cpp.o CMakeFiles/DineIn.dir/Components/Menu/Item.cpp.o CMakeFiles/DineIn.dir/Components/Menu/ItemList.cpp.o CMakeFiles/DineIn.dir/Components/Menu/MenuBar.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/Cursor.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/TextBox.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/TextInput.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/Typing.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Fonts.cpp.o CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Image.cpp.o CMakeFiles/DineIn.dir/SFMLTools/MouseEvents.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Position.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Sprites.cpp.o CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build DineIn: CXX_EXECUTABLE_LINKER__DineIn_Debug CMakeFiles/DineIn.dir/main.cpp.o CMakeFiles/DineIn.dir/Applications/HomePage.cpp.o CMakeFiles/DineIn.dir/Components/FileTree/FileTree.cpp.o CMakeFiles/DineIn.dir/Components/FileTree/FileTreeNode.cpp.o CMakeFiles/DineIn.dir/Components/History/DropdownSnapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/History.cpp.o CMakeFiles/DineIn.dir/Components/History/Snapshot.cpp.o CMakeFiles/DineIn.dir/Components/History/SnapshotInterface.cpp.o CMakeFiles/DineIn.dir/Components/History/TextInputSnapshot.cpp.o CMakeFiles/DineIn.dir/Components/Menu/DropdownMenu.cpp.o CMakeFiles/DineIn.dir/Components/Menu/Item.cpp.o CMakeFiles/DineIn.dir/Components/Menu/ItemList.cpp.o CMakeFiles/DineIn.dir/Components/Menu/MenuBar.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/Cursor.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/TextBox.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/TextInput.cpp.o CMakeFiles/DineIn.dir/Components/TextInput/Typing.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Application.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Fonts.cpp.o CMakeFiles/DineIn.dir/SFMLTools/GUIComponent.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Image.cpp.o CMakeFiles/DineIn.dir/SFMLTools/MouseEvents.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Position.cpp.o CMakeFiles/DineIn.dir/SFMLTools/Sprites.cpp.o CMakeFiles/DineIn.dir/SFMLTools/States.cpp.o CMakeFiles/DineIn.dir/Applications/RestaurantsPage.cpp.o CMakeFiles/DineIn.dir/Applications/RestaurantItem.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -std=c++11 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/DineIn.dir

@@ -1,25 +1,21 @@
 //
-// Created by Raina Wan on 4/18/23.
+// Created by Raina Wan on 4/19/23.
 //
 
-#ifndef DINEIN_HOMEPAGE_H
-#define DINEIN_HOMEPAGE_H
+#ifndef DINEIN_RESTAURANTSPAGE_H
+#define DINEIN_RESTAURANTSPAGE_H
 
 #include "../SFMLTools/GUIComponent.h"
-#include "../Components/TextInput/TextInput.h"
 #include "../SFMLTools/Sprites.h"
+#include "RestaurantItem.h"
+#include <vector>
 
-class HomePage : public GUIComponent {
+class RestaurantsPage : public GUIComponent {
 private:
     sf::Text header;
-    Sprites background, search_sprite;
-    TextInput text_input;
-    void setupHeader();
-    void setupTextInput();
-    void setupSprite();
+    std::vector<RestaurantItem> items;
 public:
-    HomePage();
-    void init();
+    RestaurantsPage();
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;
@@ -29,4 +25,4 @@ public:
 };
 
 
-#endif //DINEIN_HOMEPAGE_H
+#endif //DINEIN_RESTAURANTSPAGE_H

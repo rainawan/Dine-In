@@ -8,9 +8,10 @@
 #include <iostream>
 #include <vector>
 #include "GUIComponent.h"
+#include "../Applications/HomePage.h"
+#include "../Applications/RestaurantItem.h"
 #include "../Components/Menu/MenuBar.h"
 #include "../Components/TextInput/TextInput.h"
-#include "../Applications/HomePage.h"
 #include "../Components/FileTree/FileTreeNode.h"
 #include "../Components/FileTree/FileTree.h"
 

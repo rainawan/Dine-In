@@ -46,6 +46,14 @@ void TextInput::initialize() {
     cursor.setCharacterSize(typing.getCharacterSize() - 15);
 }
 
+sf::FloatRect TextInput::getGlobalBounds() const {
+    return textbox.getGlobalBounds();
+}
+
+sf::Vector2f TextInput::getPosition() {
+    return textbox.getPosition();
+}
+
 void TextInput::draw(sf::RenderTarget &window, sf::RenderStates states) const {
     window.draw(textbox);
     window.draw(typing);

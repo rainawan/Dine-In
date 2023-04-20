@@ -63,6 +63,10 @@ void Item::setTextColor(sf::Color color) {
     text.setFillColor(color);
 }
 
+void Item::setOutlineColor(sf::Color color) {
+    box.setOutlineColor(color);
+}
+
 sf::FloatRect Item::getGlobalBounds() const {
     return box.getGlobalBounds();
 }

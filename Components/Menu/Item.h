@@ -27,6 +27,7 @@ public:
     void setTextSize(unsigned int size);
     void setBackgroundColor(sf::Color color);
     void setTextColor(sf::Color color);
+    void setOutlineColor(sf::Color color);
     sf::FloatRect getGlobalBounds() const;
     void setPosition(const sf::Vector2f& position);
     void setPosition(float x, float y);
