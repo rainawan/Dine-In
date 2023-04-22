@@ -9,12 +9,11 @@
 #include <SFML/Graphics.hpp>
 
 enum image_enum {
-    HOME,
-    FOOD,
-    SEARCH,
-    SORT,
-    PRICE,
-    POPULARITY,
+    HOME, FOOD, SEARCH,
+    SORT, PRICE, POPULARITY,
+    FIVESTAR, FOURSTAR, DOLLAR,
+    BONE_KETTLE, MILLIES, GRANVILLE, URTH,
+    SPICE1, SPICE2,
     LAST_IMAGE
 };
 

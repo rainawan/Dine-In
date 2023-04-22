@@ -14,8 +14,14 @@ class RestaurantsPage : public GUIComponent {
 private:
     sf::Text header;
     std::vector<RestaurantItem> items;
+    Sprites background;
+    void reposition();
+    void init();
+    void setupBackground();
 public:
     RestaurantsPage();
+    void setPosition(const sf::Vector2f& pos);
+    void push(std::string string, sf::Vector2f size, image_enum food, image_enum stars, int dollars);
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;

@@ -16,7 +16,8 @@ public:
     void setPosition(const sf::Vector2f& position);
     void setScale(const sf::Vector2f& position);
     void setSize(const sf::Vector2f& size);
-    void getPosition();
+    void setFillColor(sf::Color color);
+    sf::Vector2f& getPosition();
     void draw();
 };
 

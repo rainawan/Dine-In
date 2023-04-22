@@ -19,7 +19,13 @@ void Position::right(const T &obj1, S &obj2, float spacing) {
 
 template<class T, class S>
 void Position::center(const T &obj1, S &obj2, float spacing) {
-
+    sf::FloatRect textRect = obj2.getGlobalBounds();
+    sf::FloatRect tRect = obj1.getGlobalBounds();
+    sf::Vector2f center = {textRect.width/2.0f, textRect.height/2.f};
+    sf::Vector2f localBounds = {center.x + obj2.getLocalBounds().left, center.y + obj2.getLocalBounds().top};
+    sf::Vector2f rounded = {std::round(localBounds.x), std::round(localBounds.y)};
+    obj2.setOrigin(rounded);
+    obj2.setPosition({tRect.left + tRect.width/2, tRect.top + tRect.height/2});
 }
 template<class T, class S>
 void Position::bottom(const T &obj1, S &obj2, float spacing) {

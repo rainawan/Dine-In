@@ -19,7 +19,11 @@ void Application::eventListener() {
 void Application::runLoop() {
     HomePage home;
 
-    RestaurantItem item;
+    RestaurantsPage item;
+    item.setPosition({200,150});
+
+//    RestaurantItem item ("Bone Kettle", {1400, 250}, BONE_KETTLE, FIVESTAR, 3);
+//    item.setPosition({300,500});
 
     while(window.isOpen()) {
 
@@ -32,7 +36,7 @@ void Application::runLoop() {
         }
 
         home.update();
-        window.clear(sf::Color::White);
+        window.clear(sf::Color::Blue);
         window.draw(item);
         window.display();
     }

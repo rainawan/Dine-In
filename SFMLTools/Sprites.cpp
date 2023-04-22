@@ -28,7 +28,11 @@ void Sprites::setSize(const sf::Vector2f &size) {
     setSize(size);
 }
 
-void Sprites::getPosition() {
+void Sprites::setFillColor(sf::Color color) {
+    setFillColor(color);
+}
+
+sf::Vector2f& Sprites::getPosition() {
     return this->getPosition();
 }
 

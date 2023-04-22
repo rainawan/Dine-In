@@ -8,10 +8,8 @@
 #include <map>
 
 enum fonts_enum {
-    OPEN_SANS,
-    AVALON,
-    EVIDANCE,
-    RICHARD,
+    OPEN_SANS, AVALON, EVIDANCE,
+    RICHARD, LOUISE,
     LAST_FONT
 };
 

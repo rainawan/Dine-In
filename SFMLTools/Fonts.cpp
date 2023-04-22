@@ -15,6 +15,7 @@ std::string Fonts::getPath(fonts_enum font) {
         case AVALON: return "SFMLTools/fonts/Avalon.ttf";
         case EVIDANCE: return "SFMLTools/fonts/Evidance Display Demo.otf";
         case RICHARD: return "SFMLTools/fonts/Richard Samuels.otf";
+        case LOUISE: return "SFMLTools/fonts/Louis George Cafe Bold.ttf";
         case LAST_FONT: return "";
     }
 }

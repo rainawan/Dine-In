@@ -19,6 +19,15 @@ std::string Image::getPath(image_enum image) {
         case SORT: return "SFMLTools/images/sort-down.png";
         case PRICE: return "SFMLTools/images/price-tag.png";
         case POPULARITY: return "SFMLTools/images/fire.png";
+        case FIVESTAR: return "SFMLTools/images/fivestar.png";
+        case FOURSTAR: return "SFMLTools/images/fourstar.png";
+        case DOLLAR: return "SFMLTools/images/dollar.png";
+        case BONE_KETTLE: return "SFMLTools/images/bone_kettle.jpeg";
+        case MILLIES: return "SFMLTools/images/millies.jpeg";
+        case GRANVILLE: return "SFMLTools/images/granv1.jpeg";
+        case URTH: return "SFMLTools/images/urth.jpeg";
+        case SPICE1: return "SFMLTools/images/spices.jpeg";
+        case SPICE2: return "SFMLTools/images/spice6.jpg";
         case LAST_IMAGE: "";
     }
     return std::string();
