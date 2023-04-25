@@ -31,7 +31,7 @@ void DropdownMenu::addItem(std::string item) {
 
 void DropdownMenu::setPosition(const sf::Vector2f &position) {
     header.setPosition(position);
-    Position::bottom(header, list, 20);
+    Position::bottom(header, list, 10);
 }
 
 void DropdownMenu::setHeader(std::string string) {
@@ -54,7 +54,6 @@ void DropdownMenu::draw(sf::RenderTarget &target, sf::RenderStates states) const
 }
 
 void DropdownMenu::eventHandler(sf::RenderWindow &window, sf::Event event) {
-
     list.eventHandler(window, event);
     header.eventHandler(window, event);
 

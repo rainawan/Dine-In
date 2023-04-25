@@ -46,6 +46,10 @@ void TextInput::initialize() {
     cursor.setCharacterSize(typing.getCharacterSize() - 15);
 }
 
+void TextInput::reposition() {
+    typing.setPosition({textbox.getPosition().x, textbox.getPosition().y});
+}
+
 sf::FloatRect TextInput::getGlobalBounds() const {
     return textbox.getGlobalBounds();
 }
@@ -74,11 +78,11 @@ void TextInput::eventHandler(sf::RenderWindow &window, sf::Event event) {
         textbox.setOutlineColor(sf::Color::Black);
         cursor.disableState(ENABLED);
     }
-
 }
 
 void TextInput::update() {
     cursor.update();
+    reposition();
 }
 
 Snapshot *TextInput::getSnapshot() {

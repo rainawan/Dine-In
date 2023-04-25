@@ -13,7 +13,7 @@
 class RestaurantItem : public GUIComponent {
 private:
     sf::RectangleShape item, outline;
-    sf::Text text;
+    sf::Text header;
     Sprites rest_sprite, star_sprite;
     std::vector<Sprites> dollar_sprites;
     void setupText(std::string string);
@@ -27,6 +27,9 @@ public:
     RestaurantItem(std::string string, sf::Vector2f size, image_enum food, image_enum stars, int dollars);
     void setScale(sf::Vector2f scale);
     void setPosition(const sf::Vector2f& position);
+    std::string getString();
+    std::vector<Sprites> getDollars();
+    Sprites getStars();
     sf::Vector2f getPosition() const;
     sf::FloatRect getGlobalBounds() const;
 

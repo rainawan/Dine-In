@@ -16,6 +16,7 @@ enum states_enum {
     NO_CHANGE,
     SHOW_CHILDREN,
     HIGHLIGHT,
+    RESERVE_PAGE,
     LAST_STATE
 };
 

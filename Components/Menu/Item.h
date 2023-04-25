@@ -33,6 +33,8 @@ public:
     void setPosition(float x, float y);
     void setTextPosition(const sf::Vector2f& position);
     void setString(std::string text);
+    void setFont(fonts_enum font);
+    void setCharacterSize(int size);
     sf::Vector2f getPosition() const;
     std::string getString() const;
 

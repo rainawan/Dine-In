@@ -31,7 +31,7 @@ template<class T, class S>
 void Position::bottom(const T &obj1, S &obj2, float spacing) {
     sf::FloatRect b1 = obj1.getGlobalBounds();
     sf::FloatRect b2 = obj2.getGlobalBounds();
-    obj2.setPosition({b1.left, b1.top + b1.height + spacing});
+    obj2.setPosition({b1.left + 2, b1.top + b1.height + spacing});
 }
 
 template<class T, class S>

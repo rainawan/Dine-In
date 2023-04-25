@@ -11,6 +11,7 @@
 #include "../Applications/HomePage.h"
 #include "../Applications/RestaurantItem.h"
 #include "../Applications/RestaurantsPage.h"
+#include "../Applications/ReservationPage.h"
 #include "../Components/Menu/MenuBar.h"
 #include "../Components/TextInput/TextInput.h"
 #include "../Components/FileTree/FileTreeNode.h"

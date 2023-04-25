@@ -8,15 +8,19 @@
 #include "../SFMLTools/GUIComponent.h"
 #include "../Components/TextInput/TextInput.h"
 #include "../SFMLTools/Sprites.h"
+#include "RestaurantsPage.h"
 
 class HomePage : public GUIComponent {
 private:
     sf::Text header;
     Sprites background, search_sprite;
     TextInput text_input;
+    RestaurantsPage restaurants;
     void setupHeader();
     void setupTextInput();
     void setupSprite();
+    void setupRestaurants();
+    void repositionTextInput(sf::Vector2f pos);
 public:
     HomePage();
     void init();

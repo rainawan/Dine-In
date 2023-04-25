@@ -80,16 +80,20 @@ void Item::setPosition(float x, float y) {
     setPosition({x, y});
 }
 
-//void Item::setPosition(sf::Vector2f position) const {
-//    box.sf::RectangleShape::setPosition(position);
-//}
-
 void Item::setTextPosition(const sf::Vector2f &position) {
     text.setPosition(position);
 }
 
 void Item::setString(std::string text) {
     this->text.setString(text);
+}
+
+void Item::setFont(fonts_enum font) {
+    text.setFont(Fonts::getFont(font));
+}
+
+void Item::setCharacterSize(int size) {
+    text.setCharacterSize(size);
 }
 
 sf::Vector2f Item::getPosition() const {
@@ -135,5 +139,5 @@ Snapshot *Item::getSnapshot() {
 }
 
 void Item::applySnapshot(Snapshot *snapshot) {
-    text.setString(dynamic_cast<DropdownSnapshot*>(snapshot)->getData()); // cast text input to snapshot
+    text.setString(dynamic_cast<DropdownSnapshot*>(snapshot)->getData()); // cast header input to snapshot
 }

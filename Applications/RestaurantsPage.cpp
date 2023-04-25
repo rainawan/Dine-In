@@ -10,9 +10,9 @@ RestaurantsPage::RestaurantsPage() {
 
 void RestaurantsPage::init() {
     // Restaurants
-    RestaurantItem bone_kettle ("Bone Kettle", {1400, 250}, BONE_KETTLE, FIVESTAR, 3);
+    RestaurantItem bone_kettle ("Bone Kettle", {1400, 250}, BONE_KETTLE, FIVESTAR, 4);
     RestaurantItem millies ("Millie's Cafe", {1400, 250}, MILLIES, FIVESTAR, 2);
-    RestaurantItem granville ("Granville", {1400, 250}, GRANVILLE, FOURSTAR, 4);
+    RestaurantItem granville ("Granville", {1400, 250}, GRANVILLE, FOURSTAR, 3);
     RestaurantItem urth ("Urth Caffe", {1400, 250}, URTH, FOURSTAR, 2);
 
     millies.setScale({.27,.3});
@@ -26,7 +26,19 @@ void RestaurantsPage::init() {
     items.push_back(urth);
 
     reposition();
+    setupFileTree();
     setupBackground();
+}
+
+void RestaurantsPage::setupFileTree() {
+    sort.push("Sort By");
+    sort.push("Sort By/Price");
+    sort.push("Sort By/Price/Low to High");
+    sort.push("Sort By/Price/High to Low");
+    sort.push("Sort By/Popularity");
+    sort.push("Sort By/Popularity/Most Loved");
+    sort.push("Sort By/Popularity/New Places");
+    sort.setPosition({1700,50});
 }
 
 void RestaurantsPage::setupBackground() {
@@ -55,12 +67,14 @@ void RestaurantsPage::draw(sf::RenderTarget &target, sf::RenderStates states) co
     for (int i = 0; i < items.size(); ++i) {
         target.draw(items[i]);
     }
+    target.draw(sort);
 }
 
 void RestaurantsPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
     for (int i = 0; i < items.size(); ++i) {
         items[i].eventHandler(window, event);
     }
+    sort.eventHandler(window, event);
 }
 
 void RestaurantsPage::update() {

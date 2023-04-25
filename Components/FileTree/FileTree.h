@@ -17,6 +17,7 @@ private:
     FileTreeNode* createNode(std::string s);
 public:
     void push(std::string filepath);
+    void setPosition(const sf::Vector2f& position);
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;
     void update() override;

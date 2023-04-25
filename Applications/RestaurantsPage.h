@@ -8,6 +8,8 @@
 #include "../SFMLTools/GUIComponent.h"
 #include "../SFMLTools/Sprites.h"
 #include "RestaurantItem.h"
+#include "../Components/TextInput/TextInput.h"
+#include "../Components/FileTree/FileTree.h"
 #include <vector>
 
 class RestaurantsPage : public GUIComponent {
@@ -15,8 +17,11 @@ private:
     sf::Text header;
     std::vector<RestaurantItem> items;
     Sprites background;
+    TextInput text_input;
+    FileTree sort;
     void reposition();
     void init();
+    void setupFileTree();
     void setupBackground();
 public:
     RestaurantsPage();

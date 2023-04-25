@@ -18,10 +18,10 @@ RestaurantItem::RestaurantItem(std::string string, sf::Vector2f size, image_enum
 }
 
 void RestaurantItem::setupText(std::string string) {
-    text.setString(string);
-    text.setFont(Fonts::getFont(LOUISE));
-    text.setCharacterSize(100);
-    text.setFillColor(sf::Color(128,0,0));
+    header.setString(string);
+    header.setFont(Fonts::getFont(LOUISE));
+    header.setCharacterSize(100);
+    header.setFillColor(sf::Color(128, 0, 0));
 }
 
 void RestaurantItem::setupFoodSprite(image_enum food) {
@@ -55,12 +55,12 @@ void RestaurantItem::setupBox(sf::Vector2f size) {
 
 void RestaurantItem::reposition() {
     Position::center(item, outline);
-    text.setPosition({item.getPosition().x + 20, item.getPosition().y + 10});
+    header.setPosition({item.getPosition().x + 20, item.getPosition().y + 10});
 
     rest_sprite.sf::RectangleShape::setPosition({item.getPosition().x + item.getGlobalBounds().width - rest_sprite.getGlobalBounds().width - 30,
                                                  item.getPosition().y + (item.getGlobalBounds().height / 2) - (rest_sprite.getGlobalBounds().height / 2)});
 
-    star_sprite.sf::RectangleShape::setPosition({text.getPosition().x, text.getPosition().y + 40});
+    star_sprite.sf::RectangleShape::setPosition({header.getPosition().x, header.getPosition().y + 40});
 
     if (!dollar_sprites.empty()) {
         dollar_sprites[0].sf::RectangleShape::setPosition({star_sprite.sf::RectangleShape::getPosition().x + star_sprite.getGlobalBounds().width + 90, star_sprite.sf::RectangleShape::getPosition().y + 110});
@@ -77,6 +77,18 @@ void RestaurantItem::setScale(sf::Vector2f scale) {
 void RestaurantItem::setPosition(const sf::Vector2f &position) {
     item.setPosition(position);
     reposition();
+}
+
+std::string RestaurantItem::getString() {
+    return header.getString();
+}
+
+std::vector<Sprites> RestaurantItem::getDollars() {
+    return dollar_sprites;
+}
+
+Sprites RestaurantItem::getStars() {
+    return star_sprite;
 }
 
 sf::Vector2f RestaurantItem::getPosition() const {
@@ -97,7 +109,7 @@ void RestaurantItem::draw(sf::RenderTarget &target, sf::RenderStates states) con
         target.draw(dollar_sprites[i]);
     }
 
-    target.draw(text);
+    target.draw(header);
 }
 
 void RestaurantItem::eventHandler(sf::RenderWindow &window, sf::Event event) {

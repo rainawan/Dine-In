@@ -19,11 +19,10 @@ void Application::eventListener() {
 void Application::runLoop() {
     HomePage home;
 
-    RestaurantsPage item;
-    item.setPosition({200,150});
+//    RestaurantsPage item;
+//    item.setPosition({200,300});
 
-//    RestaurantItem item ("Bone Kettle", {1400, 250}, BONE_KETTLE, FIVESTAR, 3);
-//    item.setPosition({300,500});
+    ReservationPage item;
 
     while(window.isOpen()) {
 
@@ -31,12 +30,12 @@ void Application::runLoop() {
         while(window.pollEvent(event)) {
             if(sf::Event::Closed == event.type)
                 window.close();
-            home.eventHandler(window, event);
+//            home.eventHandler(window, event);
             item.eventHandler(window, event);
         }
 
         home.update();
-        window.clear(sf::Color::Blue);
+        window.clear(sf::Color::White);
         window.draw(item);
         window.display();
     }

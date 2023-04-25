@@ -25,7 +25,7 @@ void FileTree::push(std::string filepath) {
     else if (p->getData() == paths[0]) {  // root is what we're looking for
         for (int i = 1; i < paths.size() - 1; i++) {
             if (p != nullptr)  { // children is what we're looking for
-                p = search(paths[i], p); // search first path, starting from root, until you reach new item
+                p = search(paths[i], p); // search first path, starting from root, until you reach new restaurants
             }
         }
         p->push(paths[paths.size() - 1], POPULARITY); // FILE
@@ -46,6 +46,10 @@ FileTreeNode *FileTree::createNode(std::string s) {
     FileTreeNode* p = new FileTreeNode;
     p->getData() = s;
     return p;
+}
+
+void FileTree::setPosition(const sf::Vector2f &position) {
+    root->setPosition(position);
 }
 
 void FileTree::draw(sf::RenderTarget &target, sf::RenderStates states) const {

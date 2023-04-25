@@ -18,6 +18,7 @@ private:
     TextBox textbox;
     sf::Text label;
     Cursor cursor;
+    void reposition();
 public:
     TextInput();
     void setLabel(std::string string);

@@ -5,7 +5,7 @@
 #include "Typing.h"
 
 Typing::Typing() {
-    text.setFont(Fonts::getFont(OPEN_SANS));
+    text.setFont(Fonts::getFont(LOUISE));
 }
 
 void Typing::setPosition(const sf::Vector2f &position) {
@@ -67,6 +67,6 @@ Snapshot *Typing::getSnapshot() {
 
 void Typing::applySnapshot(Snapshot* snapshot) {
 //    std::cout << dynamic_cast<TextInputSnapshot*>(snapshot)->getData();
-    text.setString(dynamic_cast<TextInputSnapshot*>(snapshot)->getData()); // cast text input to snapshot
+    text.setString(dynamic_cast<TextInputSnapshot*>(snapshot)->getData()); // cast header input to snapshot
     s = dynamic_cast<TextInputSnapshot*>(snapshot)->getData();
 }
