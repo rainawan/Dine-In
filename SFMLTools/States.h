@@ -16,6 +16,8 @@ enum states_enum {
     NO_CHANGE,
     SHOW_CHILDREN,
     HIGHLIGHT,
+    TEXT_INPUT,
+    REST_PAGE,
     RESERVE_PAGE,
     LAST_STATE
 };

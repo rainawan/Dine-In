@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include "GUIComponent.h"
+#include "States.h"
 #include "../Applications/HomePage.h"
 #include "../Applications/RestaurantItem.h"
 #include "../Applications/RestaurantsPage.h"
@@ -16,13 +17,13 @@
 #include "../Components/TextInput/TextInput.h"
 #include "../Components/FileTree/FileTreeNode.h"
 #include "../Components/FileTree/FileTree.h"
+#include "../Applications/App.h"
 
 class Application {
 private:
     sf::RenderWindow window;
     void eventListener();
     std::vector<GUIComponent *> objects;
-
 public:
     Application();
     Application(sf::VideoMode videoMode, std::string title);

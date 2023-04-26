@@ -8,6 +8,7 @@
 #include "../SFMLTools/GUIComponent.h"
 #include "../SFMLTools/Sprites.h"
 #include "RestaurantItem.h"
+#include "ReservationPage.h"
 #include "../Components/TextInput/TextInput.h"
 #include "../Components/FileTree/FileTree.h"
 #include <vector>
@@ -19,6 +20,7 @@ private:
     Sprites background;
     TextInput text_input;
     FileTree sort;
+    ReservationPage restaurant;
     void reposition();
     void init();
     void setupFileTree();

@@ -14,7 +14,7 @@ class Item : public GUIComponent {
 private:
     sf::RectangleShape box;
     sf::Text text;
-    void setupText(std::string text);
+    void setupText(std::string string);
     void setupBox(sf::Vector2f size);
     void setupColor(sf::Color background, sf::Color hover);
     sf::Color backgroundColor = sf::Color::White, hoverColor = sf::Color::Blue;

@@ -24,18 +24,18 @@ void Item::onClick(void (*f)(), sf::RenderWindow& window) {
     }
 }
 
-void Item::setupText(std::string text) {
-    this->text.setFont(Fonts::getFont(OPEN_SANS));
-    this->text.setString(text);
-    this->text.setFillColor(sf::Color::Red);
-    Position::centerText(box, this->text);
-    box.setFillColor(sf::Color::Green);
-    box.setOutlineColor(sf::Color::Black);
-    box.setOutlineThickness(2);
+void Item::setupText(std::string string) {
+    text.setFont(Fonts::getFont(OPEN_SANS));
+    text.setString(string);
+    text.setFillColor(sf::Color::Red);
 }
 
 void Item::setupBox(sf::Vector2f size) {
-    setBoxSize(size);
+    box.setSize(size);
+    box.setFillColor(sf::Color::Green);
+    box.setOutlineColor(sf::Color::Black);
+    box.setOutlineThickness(2);
+    Position::centerText(box, text);
 }
 
 void Item::setupColor(sf::Color background, sf::Color hover) {

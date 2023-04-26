@@ -6,6 +6,7 @@
 
 HomePage::HomePage() {
     init();
+    States::enableState(TEXT_INPUT);
 }
 
 void HomePage::init() {
@@ -46,30 +47,38 @@ void HomePage::repositionTextInput(sf::Vector2f pos) {
 }
 
 void HomePage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    if (!getState(RESERVE_PAGE)) {
+//    target.draw(background);
+//    target.draw(header);
+//    target.draw(text_input);
+//    target.draw(search_sprite);
+
+    if (!getState(REST_PAGE)) {
         target.draw(background);
         target.draw(header);
     }
-    if (getState(RESERVE_PAGE))
+    if (getState(REST_PAGE))
         target.draw(restaurants);
-    target.draw(text_input);
-    target.draw(search_sprite);
+
+    if (getState(TEXT_INPUT)) {
+        target.draw(text_input);
+        target.draw(search_sprite);
+    }
 }
 
 void HomePage::eventHandler(sf::RenderWindow &window, sf::Event event) {
     text_input.eventHandler(window, event);
 
     if (MouseEvents::isClicked(search_sprite, window)) {
-        enableState(RESERVE_PAGE);
+        enableState(REST_PAGE);
     }
-    if (getState(RESERVE_PAGE)) {
+    if (getState(REST_PAGE)) {
         restaurants.eventHandler(window, event);
     }
 }
 
 void HomePage::update() {
     text_input.update();
-    if (getState(RESERVE_PAGE)) {
+    if (getState(REST_PAGE)) {
         repositionTextInput({180,100});
     }
 }

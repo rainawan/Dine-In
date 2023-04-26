@@ -10,7 +10,7 @@ set(SOURCE_FILES main.cpp)
 
 # Add's all the found source files within the executable
 add_executable(DineIn ${DineIn_SRC}
-        Applications/HomePage.cpp Applications/HomePage.h Applications/ReservationPage.cpp Applications/ReservationPage.h Applications/RestaurantItem.cpp Applications/RestaurantItem.h Applications/RestaurantsPage.cpp Applications/RestaurantsPage.h
+        Applications/App.cpp Applications/App.h Applications/HomePage.cpp Applications/HomePage.h Applications/ReservationPage.cpp Applications/ReservationPage.h Applications/RestaurantItem.cpp Applications/RestaurantItem.h Applications/RestaurantsPage.cpp Applications/RestaurantsPage.h
         Components/FileTree/FileTree.cpp Components/FileTree/FileTree.h Components/FileTree/FileTreeNode.cpp Components/FileTree/FileTreeNode.h
         Components/History/DropdownSnapshot.cpp Components/History/DropdownSnapshot.h Components/History/History.cpp Components/History/History.h Components/History/Snapshot.cpp Components/History/Snapshot.h Components/History/SnapshotInterface.cpp Components/History/SnapshotInterface.h Components/History/TextInputSnapshot.cpp Components/History/TextInputSnapshot.h
         Components/Menu/DropdownMenu.cpp Components/Menu/DropdownMenu.h Components/Menu/Item.cpp Components/Menu/Item.h Components/Menu/ItemList.cpp Components/Menu/ItemList.h Components/Menu/MenuBar.cpp Components/Menu/MenuBar.h

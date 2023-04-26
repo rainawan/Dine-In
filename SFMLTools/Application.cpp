@@ -22,7 +22,9 @@ void Application::runLoop() {
 //    RestaurantsPage item;
 //    item.setPosition({200,300});
 
-    ReservationPage item;
+    ReservationPage item(RestaurantItem("Test", {1400, 250}, BONE_KETTLE, FIVESTAR, 4), BK_INSIDE);
+
+    App app;
 
     while(window.isOpen()) {
 
@@ -30,13 +32,14 @@ void Application::runLoop() {
         while(window.pollEvent(event)) {
             if(sf::Event::Closed == event.type)
                 window.close();
-//            home.eventHandler(window, event);
-            item.eventHandler(window, event);
+//            app.eventHandler(window, event);
+            home.eventHandler(window, event);
+//            item.eventHandler(window, event);
         }
 
         home.update();
         window.clear(sf::Color::White);
-        window.draw(item);
+        window.draw(home);
         window.display();
     }
 }

@@ -63,16 +63,29 @@ void RestaurantsPage::push(std::string string, sf::Vector2f size, image_enum foo
 }
 
 void RestaurantsPage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(background);
-    for (int i = 0; i < items.size(); ++i) {
-        target.draw(items[i]);
+    if (!getState(RESERVE_PAGE)) {
+        target.draw(background);
+        for (int i = 0; i < items.size(); ++i) {
+            target.draw(items[i]);
+        }
+        target.draw(sort);
     }
-    target.draw(sort);
+    if (getState(RESERVE_PAGE)) {
+        target.draw(restaurant);
+    }
 }
 
 void RestaurantsPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
     for (int i = 0; i < items.size(); ++i) {
         items[i].eventHandler(window, event);
+        if (MouseEvents::isClicked(items[i], window)) {
+            std::cout << items[i].getString();
+            restaurant = {RestaurantItem(items[i].getString(), {1400, 250}, BONE_KETTLE, FIVESTAR, 4), BK_INSIDE};
+            restaurant.eventHandler(window, event);
+            enableState(RESERVE_PAGE);
+            disableState(TEXT_INPUT);
+            disableState(REST_PAGE);
+        }
     }
     sort.eventHandler(window, event);
 }

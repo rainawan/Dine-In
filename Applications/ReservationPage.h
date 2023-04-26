@@ -12,13 +12,16 @@
 class ReservationPage : public GUIComponent {
 private:
     RestaurantItem item;
-    sf::RectangleShape box;
+    Item submit;
+    Sprites inside;
+    sf::RectangleShape underline;
     sf::Text header;
     Sprites food, background;
     DropdownMenu date, time, party_size;
     void setupHeader(std::string string);
     void setupImage(image_enum image);
     void setupBackground();
+    void setupSubmit();
     void setupMenu();
 public:
     ReservationPage();

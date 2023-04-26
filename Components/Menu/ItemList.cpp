@@ -5,7 +5,7 @@
 #include "ItemList.h"
 
 void ItemList::addItem(const std::string &text, void (*f)()) {
-    items.emplace_back(text, sf::Vector2f(500.f,50.f));
+    items.emplace_back(text, sf::Vector2f(400.f,50.f));
     position();
 }
 
@@ -17,7 +17,6 @@ void ItemList::addItem(const Item &item, void (*f)()) {
 void ItemList::setPosition(const sf::Vector2f &position) {
     items[0].setPosition(position);
     this->position();
-
 }
 
 void ItemList::setPosition(float x, float y) {
