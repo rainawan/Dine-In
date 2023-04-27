@@ -86,6 +86,7 @@ void Item::setTextPosition(const sf::Vector2f &position) {
 
 void Item::setString(std::string text) {
     this->text.setString(text);
+    Position::centerText(box, this->text);
 }
 
 void Item::setFont(fonts_enum font) {

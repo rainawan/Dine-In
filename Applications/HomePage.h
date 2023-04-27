@@ -9,6 +9,7 @@
 #include "../Components/TextInput/TextInput.h"
 #include "../SFMLTools/Sprites.h"
 #include "RestaurantsPage.h"
+#include "ReservationPage.h"
 
 class HomePage : public GUIComponent {
 private:
@@ -16,6 +17,7 @@ private:
     Sprites background, search_sprite;
     TextInput text_input;
     RestaurantsPage restaurants;
+    ReservationPage reserve;
     void setupHeader();
     void setupTextInput();
     void setupSprite();

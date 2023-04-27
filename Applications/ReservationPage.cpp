@@ -14,6 +14,7 @@ ReservationPage::ReservationPage(RestaurantItem item, image_enum image) {
     setupBackground();
     setupMenu();
     setupSubmit();
+
 }
 
 void ReservationPage::setupHeader(std::string string) {
@@ -36,6 +37,10 @@ void ReservationPage::setupImage(image_enum image) {
 void ReservationPage::setupBackground() {
     background.setSprite(RESERVE);
     background.sf::RectangleShape::setScale({.42,.38});
+
+    back.setSprite(BACK);
+    back.sf::RectangleShape::setScale({.08,.08});
+    back.sf::RectangleShape::setPosition({30,40});
 }
 
 void ReservationPage::setupSubmit() {
@@ -61,6 +66,7 @@ void ReservationPage::setupMenu() {
 
 void ReservationPage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(background);
+    target.draw(back);
 
     target.draw(header);
     target.draw(underline);
@@ -76,6 +82,10 @@ void ReservationPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
     date.eventHandler(window, event);
     time.eventHandler(window, event);
     party_size.eventHandler(window, event);
+    if (MouseEvents::isClicked(back, window)) {
+        enableState(REST_PAGE);
+    }
+
 }
 
 void ReservationPage::update() {

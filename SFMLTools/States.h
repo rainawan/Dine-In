@@ -19,6 +19,9 @@ enum states_enum {
     TEXT_INPUT,
     REST_PAGE,
     RESERVE_PAGE,
+    RESTAURANT,
+    HOME_PAGE,
+    HIDE_TEXT,
     LAST_STATE
 };
 

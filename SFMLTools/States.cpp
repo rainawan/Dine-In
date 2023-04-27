@@ -4,8 +4,6 @@
 
 #include "States.h"
 
-//std::map<states_enum, bool> States::map;
-
 States::States() {
     load();
 }

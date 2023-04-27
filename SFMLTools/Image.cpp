@@ -29,6 +29,7 @@ std::string Image::getPath(image_enum image) {
         case SPICE1: return "SFMLTools/images/spices.jpeg";
         case SPICE2: return "SFMLTools/images/spice6.jpg";
         case RESERVE: return "SFMLTools/images/reserve5.jpg";
+        case BACK: return "SFMLTools/images/back.png";
         case BK_INSIDE: return "SFMLTools/images/bk_inside.jpeg";
         case LAST_IMAGE: "";
     }

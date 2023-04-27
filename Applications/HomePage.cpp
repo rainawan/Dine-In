@@ -5,8 +5,8 @@
 #include "HomePage.h"
 
 HomePage::HomePage() {
-    init();
     States::enableState(TEXT_INPUT);
+    init();
 }
 
 void HomePage::init() {
@@ -56,10 +56,10 @@ void HomePage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(background);
         target.draw(header);
     }
-    if (getState(REST_PAGE))
+    if (getState(REST_PAGE)) {
         target.draw(restaurants);
-
-    if (getState(TEXT_INPUT)) {
+    }
+    if (getState(TEXT_INPUT) && !restaurants.getState(HIDE_TEXT)) {
         target.draw(text_input);
         target.draw(search_sprite);
     }
@@ -70,9 +70,11 @@ void HomePage::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
     if (MouseEvents::isClicked(search_sprite, window)) {
         enableState(REST_PAGE);
+        disableState(HOME_PAGE);
     }
     if (getState(REST_PAGE)) {
         restaurants.eventHandler(window, event);
+        restaurants.enableState(REST_PAGE);
     }
 }
 

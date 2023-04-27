@@ -8,13 +8,20 @@
 #include "../SFMLTools/GUIComponent.h"
 #include "HomePage.h"
 
+
 class App : public GUIComponent {
 private:
     HomePage home;
-    ReservationPage reserve;
     RestaurantsPage restaurant;
+    ReservationPage reserve;
+    Sprites search_sprite;
+    TextInput text_input;
+    void setupTextInput();
+    void setupSprite();
+    void repositionTextInput(sf::Vector2f pos);
 public:
     App();
+    void init();
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;
     void update() override;

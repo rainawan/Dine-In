@@ -13,7 +13,7 @@ class ReservationPage : public GUIComponent {
 private:
     RestaurantItem item;
     Item submit;
-    Sprites inside;
+    Sprites inside, back;
     sf::RectangleShape underline;
     sf::Text header;
     Sprites food, background;
