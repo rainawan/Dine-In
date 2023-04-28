@@ -10,7 +10,7 @@ ReservationPage::ReservationPage() : ReservationPage(RestaurantItem("Bone Kettle
 
 ReservationPage::ReservationPage(RestaurantItem item, image_enum image) {
     setupHeader(item.getString());
-    setupImage(image);
+    setupImage(item.getString());
     setupBackground();
     setupMenu();
     setupSubmit();
@@ -31,6 +31,31 @@ void ReservationPage::setupHeader(std::string string) {
 void ReservationPage::setupImage(image_enum image) {
     inside.setSprite(image);
     inside.sf::RectangleShape::setScale({1.2,1.2});
+    inside.sf::RectangleShape::setPosition({header.getPosition().x, header.getPosition().y + 300});
+}
+
+void ReservationPage::setupImage(std::string s) {
+    switch(s[0]) {
+        case 'B':
+            inside.setSprite(BK_INSIDE);
+            inside.sf::RectangleShape::setScale({1.4,1.2});
+            break;
+        case 'M':
+            inside.setSprite(M_INSIDE);
+            inside.sf::RectangleShape::setScale({1.4,1.3});
+            break;
+        case 'G':
+            inside.setSprite(G_INSIDE);
+            inside.sf::RectangleShape::setScale({1.1,1});
+            break;
+        case 'U':
+            inside.setSprite(U_INSIDE);
+            inside.sf::RectangleShape::setScale({1.4,1.3});
+            break;
+        default:
+            inside.setSprite(BONE_KETTLE);
+            break;
+    }
     inside.sf::RectangleShape::setPosition({header.getPosition().x, header.getPosition().y + 300});
 }
 
@@ -62,6 +87,10 @@ void ReservationPage::setupMenu() {
     party_size = {"1", "2" ,"3", "4", "5", "6", "7", "8+"};
     party_size.setHeader("Party Size");
     party_size.setPosition({date.getPosition().x, 800});
+
+    requests = {"Indoor Seating", "Outdoor Seating"};
+    requests.setHeader("Requests");
+    requests.setPosition({party_size.getPosition().x + party_size.getGlobalBounds().width, party_size.getPosition().y});
 }
 
 void ReservationPage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -75,6 +104,8 @@ void ReservationPage::draw(sf::RenderTarget &target, sf::RenderStates states) co
     target.draw(date);
     target.draw(time);
     target.draw(party_size);
+    target.draw(requests);
+
     target.draw(submit);
 }
 
@@ -82,9 +113,13 @@ void ReservationPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
     date.eventHandler(window, event);
     time.eventHandler(window, event);
     party_size.eventHandler(window, event);
+    requests.eventHandler(window, event);
+    submit.eventHandler(window, event);
+
     if (MouseEvents::isClicked(back, window)) {
         enableState(REST_PAGE);
     }
+
 
 }
 

@@ -5,6 +5,7 @@
 #ifndef DINEIN_RESERVATIONPAGE_H
 #define DINEIN_RESERVATIONPAGE_H
 
+#include <iostream>
 #include "RestaurantItem.h"
 #include "../SFMLTools/GUIComponent.h"
 #include "../Components/Menu/DropdownMenu.h"
@@ -17,9 +18,10 @@ private:
     sf::RectangleShape underline;
     sf::Text header;
     Sprites food, background;
-    DropdownMenu date, time, party_size;
+    DropdownMenu date, time, party_size, requests;
     void setupHeader(std::string string);
     void setupImage(image_enum image);
+    void setupImage(std::string s);
     void setupBackground();
     void setupSubmit();
     void setupMenu();
