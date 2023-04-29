@@ -52,12 +52,25 @@ void FileTree::setPosition(const sf::Vector2f &position) {
     root->setPosition(position);
 }
 
+std::string FileTree::getData() {
+
+}
+
 void FileTree::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(*root);
 }
 
 void FileTree::eventHandler(sf::RenderWindow &window, sf::Event event) {
     root->eventHandler(window, event);
+
+//    if (root->getState(SHOW_CHILDREN))
+//        std::cout << root->getData();
+
+//    auto iter = root->begin();
+//    for (; iter != root->end(); ++iter) {
+//        if ((*iter)->getState(SHOW_CHILDREN))
+//            std::cout << (*iter)->getData();
+//    }
 }
 
 void FileTree::update() {

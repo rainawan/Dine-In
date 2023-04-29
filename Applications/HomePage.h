@@ -13,6 +13,7 @@
 
 class HomePage : public GUIComponent {
 private:
+    sf::RectangleShape yellow_box;
     sf::Text header;
     Sprites background, search_sprite;
     TextInput text_input;

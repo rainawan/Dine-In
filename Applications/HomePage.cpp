@@ -44,13 +44,12 @@ void HomePage::setupRestaurants() {
 void HomePage::repositionTextInput(sf::Vector2f pos) {
     text_input.setPosition(pos);
     search_sprite.sf::RectangleShape::setPosition({text_input.getPosition().x + text_input.getGlobalBounds().width + 15, text_input.getPosition().y - 9});
+    yellow_box.setFillColor(sf::Color(247, 255, 184));
+    yellow_box.setSize({search_sprite.getGlobalBounds().width / 2,search_sprite.getGlobalBounds().height / 2});
+    Position::center(search_sprite, yellow_box);
 }
 
 void HomePage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-//    target.draw(background);
-//    target.draw(header);
-//    target.draw(text_input);
-//    target.draw(search_sprite);
 
     if (!getState(REST_PAGE)) {
         target.draw(background);
@@ -60,6 +59,9 @@ void HomePage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(restaurants);
     }
     if (getState(TEXT_INPUT) && !restaurants.getState(HIDE_TEXT)) {
+        if (getState(YELLOW_BOX)) {
+            target.draw(yellow_box);
+        }
         target.draw(text_input);
         target.draw(search_sprite);
     }
@@ -82,6 +84,7 @@ void HomePage::update() {
     text_input.update();
     if (getState(REST_PAGE)) {
         repositionTextInput({180,100});
+        enableState(YELLOW_BOX);
     }
 }
 

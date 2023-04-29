@@ -38,7 +38,7 @@ void RestaurantsPage::setupFileTree() {
     sort.push("Sort By/Popularity");
     sort.push("Sort By/Popularity/Most Loved");
     sort.push("Sort By/Popularity/New Places");
-    sort.setPosition({1700,50});
+    sort.setPosition({1700,100});
 }
 
 void RestaurantsPage::setupBackground() {
@@ -59,10 +59,6 @@ void RestaurantsPage::setPosition(const sf::Vector2f &pos) {
 
 void RestaurantsPage::push(std::string string, sf::Vector2f size, image_enum food, image_enum stars, int dollars) {
     
-}
-
-ReservationPage RestaurantsPage::getReserveItem() {
-    return reserve;
 }
 
 void RestaurantsPage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -93,10 +89,10 @@ void RestaurantsPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
         for (int i = 0; i < items.size(); ++i) {
             items[i].eventHandler(window, event);
             if (MouseEvents::isClicked(items[i], window)) {
-                std::cout << items[i].getString();
                 reserve = {RestaurantItem(items[i].getString(), {1400, 250}, BONE_KETTLE, FIVESTAR, 4), BK_INSIDE};
                 enableState(RESERVE_PAGE);
                 enableState(HIDE_TEXT);
+                disableState(REST_PAGE);
             }
         }
     }

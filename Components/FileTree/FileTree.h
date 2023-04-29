@@ -18,6 +18,8 @@ private:
 public:
     void push(std::string filepath);
     void setPosition(const sf::Vector2f& position);
+    std::string getData();
+
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;
     void update() override;

@@ -55,6 +55,7 @@ void FileTreeNode::reposition() const {
 }
 
 std::string FileTreeNode::getData() {
+//    std::cout << item.getString() << " ";
     return item.getString();
 }
 
@@ -90,6 +91,7 @@ void FileTreeNode::draw(sf::RenderTarget &target, sf::RenderStates states) const
 void FileTreeNode::eventHandler(sf::RenderWindow &window, sf::Event event) {
     if (MouseEvents::isClicked(item, window)) {
         toggleState(SHOW_CHILDREN);
+//        std::cout << getData();
     }
     if (getState(SHOW_CHILDREN)) {
         for (FileTreeNode* c : children) {

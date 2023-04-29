@@ -30,7 +30,6 @@ public:
     void setPosition(const sf::Vector2f& pos);
     void push(std::string string, sf::Vector2f size, image_enum food, image_enum stars, int dollars);
 
-    ReservationPage getReserveItem();
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
     void eventHandler(sf::RenderWindow& window, sf::Event event) override;
     void update() override;
