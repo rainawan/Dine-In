@@ -22,6 +22,7 @@ enum states_enum {
     RESTAURANT,
     HOME_PAGE,
     HIDE_TEXT,
+    CONFIRM,
     LAST_STATE
 };
 

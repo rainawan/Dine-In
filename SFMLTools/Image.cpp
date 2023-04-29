@@ -26,14 +26,16 @@ std::string Image::getPath(image_enum image) {
         case MILLIES: return "SFMLTools/images/millies.jpeg";
         case GRANVILLE: return "SFMLTools/images/granv1.jpeg";
         case URTH: return "SFMLTools/images/urth.jpeg";
-        case SPICE1: return "SFMLTools/images/spices.jpeg";
-        case SPICE2: return "SFMLTools/images/spice6.jpg";
+        case TOMATO: return "SFMLTools/images/tomatoe.jpg";
         case RESERVE: return "SFMLTools/images/reserve5.jpg";
         case BACK: return "SFMLTools/images/back.png";
         case BK_INSIDE: return "SFMLTools/images/bk_inside.jpeg";
         case M_INSIDE: return "SFMLTools/images/m.jpeg";
         case G_INSIDE: return "SFMLTools/images/g.jpeg";
         case U_INSIDE: return "SFMLTools/images/u.jpeg";
+        case WEBSITE: return "SFMLTools/images/website.png";
+        case CONTACT: return "SFMLTools/images/phone.png";
+        case LOCATION: return "SFMLTools/images/location.png";
         case LAST_IMAGE: "";
     }
     return std::string();

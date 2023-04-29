@@ -42,6 +42,10 @@ sf::Vector2f DropdownMenu::getPosition() {
     return header.getPosition();
 }
 
+sf::FloatRect DropdownMenu::getHeaderBounds() {
+    return list.getHeaderBounds();
+}
+
 sf::FloatRect DropdownMenu::getGlobalBounds() {
     sf::FloatRect f = list.getGlobalBounds();
     f.height += header.getGlobalBounds().height;
@@ -54,7 +58,7 @@ void DropdownMenu::draw(sf::RenderTarget &target, sf::RenderStates states) const
 }
 
 void DropdownMenu::eventHandler(sf::RenderWindow &window, sf::Event event) {
-    list.eventHandler(window, event);
+//    list.eventHandler(window, event);
     header.eventHandler(window, event);
 
     if(MouseEvents::isClicked(header, window)) {
@@ -64,16 +68,18 @@ void DropdownMenu::eventHandler(sf::RenderWindow &window, sf::Event event) {
         disableState(HIGHLIGHT);
     }
 
-    for(Item& item : list.getItems()) {
+    if (!list.getState(HIDDEN)) {
+        for(Item& item : list.getItems()) {
 
-        item.eventHandler(window, event);
-        if (MouseEvents::isClicked(item, window)) {
-            History::push({this, getSnapshot()});
-            list.enableState(HIDDEN);
-            if (!getState(NO_CHANGE))
-                header.setString(item.getString());
+            item.eventHandler(window, event);
+            if (MouseEvents::isClicked(item, window)) {
+                History::push({this, getSnapshot()});
+                list.enableState(HIDDEN);
+                if (!getState(NO_CHANGE))
+                    header.setString(item.getString());
+            }
+            item.disableState(SHOWN);
         }
-        item.disableState(SHOWN);
     }
 
 

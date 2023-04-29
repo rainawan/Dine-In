@@ -42,9 +42,8 @@ void RestaurantsPage::setupFileTree() {
 }
 
 void RestaurantsPage::setupBackground() {
-    background.setSprite(SPICE2);
-//    background.sf::RectangleShape::setScale({4.5,3.9}); // spice1
-    background.sf::RectangleShape::setScale({4,3.6}); // spice2
+    background.setSprite(TOMATO);
+    background.sf::RectangleShape::setScale({.6,.6}); // tomato
 }
 
 void RestaurantsPage::reposition() {

@@ -23,6 +23,7 @@ public:
     void setPosition(const sf::Vector2f& position);
     void setHeader(std::string string);
     sf::Vector2f getPosition();
+    sf::FloatRect getHeaderBounds();
     sf::FloatRect getGlobalBounds();
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

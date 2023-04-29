@@ -5,7 +5,7 @@
 #include "ItemList.h"
 
 void ItemList::addItem(const std::string &text, void (*f)()) {
-    items.emplace_back(text, sf::Vector2f(400.f,50.f));
+    items.emplace_back(text, sf::Vector2f(400.f,80.f));
     position();
 }
 
@@ -21,6 +21,10 @@ void ItemList::setPosition(const sf::Vector2f &position) {
 
 void ItemList::setPosition(float x, float y) {
     setPosition({x,y});
+}
+
+sf::FloatRect ItemList::getHeaderBounds() {
+    return items[0].getGlobalBounds();
 }
 
 sf::FloatRect ItemList::getGlobalBounds() {

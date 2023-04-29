@@ -17,6 +17,7 @@ public:
     void addItem(const Item& item, void (*f)() = nullptr);
     void setPosition(const sf::Vector2f& position);
     void setPosition(float x, float y);
+    sf::FloatRect getHeaderBounds();
     sf::FloatRect getGlobalBounds();
     std::vector<Item>& getItems();
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

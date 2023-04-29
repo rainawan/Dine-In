@@ -25,7 +25,7 @@ void Item::onClick(void (*f)(), sf::RenderWindow& window) {
 }
 
 void Item::setupText(std::string string) {
-    text.setFont(Fonts::getFont(OPEN_SANS));
+    text.setFont(Fonts::getFont(LOUISE));
     text.setString(string);
     text.setFillColor(sf::Color::Red);
 }
