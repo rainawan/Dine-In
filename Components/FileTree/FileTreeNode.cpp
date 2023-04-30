@@ -55,8 +55,11 @@ void FileTreeNode::reposition() const {
 }
 
 std::string FileTreeNode::getData() {
-//    std::cout << item.getString() << " ";
     return item.getString();
+}
+
+std::string FileTreeNode::getLastClicked() {
+    return last_clicked;
 }
 
 sf::FloatRect FileTreeNode::getGlobalBounds() const {
@@ -91,8 +94,19 @@ void FileTreeNode::draw(sf::RenderTarget &target, sf::RenderStates states) const
 void FileTreeNode::eventHandler(sf::RenderWindow &window, sf::Event event) {
     if (MouseEvents::isClicked(item, window)) {
         toggleState(SHOW_CHILDREN);
-//        std::cout << getData();
+
+        if (getData() == "Low to High") {
+            enableState(LOW_TO_HIGH);
+            disableState(HIGH_TO_LOW);
+        }
+        if (getData() == "High to Low") {
+            enableState(HIGH_TO_LOW);
+            disableState(LOW_TO_HIGH);
+        }
+        std::cout << getData() << " ";
+        last_clicked = getData();
     }
+
     if (getState(SHOW_CHILDREN)) {
         for (FileTreeNode* c : children) {
             c->eventHandler(window, event);

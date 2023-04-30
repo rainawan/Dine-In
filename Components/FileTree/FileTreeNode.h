@@ -17,6 +17,7 @@ private:
     Item item;
     Sprites sprite;
     std::vector<FileTreeNode*> children;
+    std::string last_clicked;
     void setupData(std::string string);
     void setupIcon(image_enum i);
 public:
@@ -27,6 +28,7 @@ public:
     void setPosition(sf::Vector2f pos);
     void reposition() const;
     std::string getData();
+    std::string getLastClicked();
     sf::FloatRect getGlobalBounds() const;
     typedef std::vector<FileTreeNode*>::iterator iter;
     iter begin();

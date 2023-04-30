@@ -23,6 +23,10 @@ enum states_enum {
     HOME_PAGE,
     HIDE_TEXT,
     CONFIRM,
+    ITEM_CLICKED,
+    SORT_CLICKED,
+    PRICE_CLICKED,
+    LOW_TO_HIGH, HIGH_TO_LOW,
     LAST_STATE
 };
 

@@ -61,6 +61,19 @@ void RestaurantsPage::push(std::string string, sf::Vector2f size, image_enum foo
     
 }
 
+void RestaurantsPage::low_to_high() {
+    RestaurantItem first = items[0];
+    items[0] = items[3];
+    items[3] = first;
+
+    RestaurantItem second = items[1];
+    items[1] = items[2];
+    items[2] = second;
+
+//    items[0].setPosition({10,10});
+//    reposition();
+}
+
 void RestaurantsPage::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     if ((!getState(RESERVE_PAGE))) {
         target.draw(background);
@@ -103,6 +116,10 @@ void RestaurantsPage::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
     if (reserve.getState(REST_PAGE)) {
         disableState(HIDE_TEXT);
+    }
+
+    if (sort.getState(LOW_TO_HIGH)) {
+        low_to_high();
     }
 
 }

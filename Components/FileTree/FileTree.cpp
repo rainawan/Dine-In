@@ -53,7 +53,14 @@ void FileTree::setPosition(const sf::Vector2f &position) {
 }
 
 std::string FileTree::getData() {
-
+//    auto iter = root->begin();
+//    for (; iter != root->end(); ++iter) {
+//        if ((*iter)->getState(SHOW_CHILDREN))
+//            last_clicked = (*iter)->getLastClicked();
+////            std::cout << (*iter)->getData();
+//    }
+    std::cout << last_clicked << " ";
+    return last_clicked;
 }
 
 void FileTree::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -63,14 +70,25 @@ void FileTree::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 void FileTree::eventHandler(sf::RenderWindow &window, sf::Event event) {
     root->eventHandler(window, event);
 
-//    if (root->getState(SHOW_CHILDREN))
-//        std::cout << root->getData();
+    auto iter = root->begin();
+    for (; iter != root->end(); ++iter) {
 
-//    auto iter = root->begin();
-//    for (; iter != root->end(); ++iter) {
-//        if ((*iter)->getState(SHOW_CHILDREN))
-//            std::cout << (*iter)->getData();
-//    }
+        auto i = (*iter)->begin();
+        for (;i != (*iter)->end(); ++i) {
+
+            if ((*i)->getState(LOW_TO_HIGH)) {
+                last_clicked.clear();
+                last_clicked = (*i)->getData();
+                enableState(LOW_TO_HIGH);
+            }
+            if ((*i)->getState(HIGH_TO_LOW)) {
+                last_clicked.clear();
+                last_clicked = (*i)->getData();
+            }
+
+        }
+    }
+//    std::cout << last_clicked << ". ";
 }
 
 void FileTree::update() {
