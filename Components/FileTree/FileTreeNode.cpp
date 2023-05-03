@@ -103,7 +103,7 @@ void FileTreeNode::eventHandler(sf::RenderWindow &window, sf::Event event) {
             enableState(HIGH_TO_LOW);
             disableState(LOW_TO_HIGH);
         }
-        std::cout << getData() << " ";
+//        std::cout << getData() << " ";
         last_clicked = getData();
     }
 

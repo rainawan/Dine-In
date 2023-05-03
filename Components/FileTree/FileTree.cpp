@@ -28,7 +28,33 @@ void FileTree::push(std::string filepath) {
                 p = search(paths[i], p); // search first path, starting from root, until you reach new restaurants
             }
         }
-        p->push(paths[paths.size() - 1], POPULARITY); // FILE
+        p->push(paths[paths.size() - 1], set_image(paths[paths.size() - 1])); // FILE
+    }
+}
+
+image_enum FileTree::set_image(std::string s) {
+    switch (s[s.size() - 1]) {
+        case 'e': // price
+            return PRICE;
+            break;
+        case 'y': // popularity
+            return POPULARITY;
+            break;
+        case 'h': // low to high
+            return HIGH;
+            break;
+        case 'w': // high to low
+            return LOW;
+            break;
+        case 'd': // most loved
+            return LOVED;
+            break;
+        case 's': // new places
+            return NEW;
+            break;
+        default:
+            return SORT;
+            break;
     }
 }
 

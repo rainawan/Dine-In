@@ -16,6 +16,7 @@ private:
     FileTreeNode* search(std::string s, FileTreeNode* node);
     FileTreeNode* createNode(std::string s);
     std::string last_clicked;
+    image_enum set_image(std::string s);
 public:
     void push(std::string filepath);
     void setPosition(const sf::Vector2f& position);
