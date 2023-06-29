@@ -3,7 +3,8 @@
 ## Promo Video
 ### [🎬 Click Me!](https://youtu.be/0vi3rYoEjN0)
 
-## About 
+
+## Preview 
 | Demo | Steps 
 | ---- | -----
 | <img width="600" src="https://github.com/rainawan/Dine-In/blob/41f390e7ae3e74da89eb0a5278a872bbeac48006/images/search.gif" /> | <p align="left">**1) Search  🔍**<p><p>Enter a city.</p>
